@@ -6,7 +6,7 @@ export const useMovimento = (posicaoInicial, guardaPos, direcaoGuarda, escadasAb
   const [posicao, setPosicao] = useState(posicaoInicial);
   const posicaoRef = useRef(posicaoInicial);
   const [teclasPremidas, setTeclasPremidas] = useState({});
-  const [dadosColisao, setDadosColisao] = useState(null);
+  /*const [dadosColisao, setDadosColisao] = useState(null);*/
   const [portaAberta, setPortaAberta] = useState(false);
   const [proximoDaPorta, setProximoDaPorta] = useState(false);
   const [proximoDoItem, setProximoDoItem] = useState(false);
@@ -36,7 +36,7 @@ export const useMovimento = (posicaoInicial, guardaPos, direcaoGuarda, escadasAb
       canvas.width = LARGURA_ORIGINAL;
       canvas.height = ALTURA_ORIGINAL;
 
-      // --- ADICIONA ISTO PARA VER O CANVAS NO JOGO ---
+      /*// --- ADICIONA ISTO PARA VER O CANVAS NO JOGO ---
       canvas.style.position = "fixed";
       canvas.style.top = "10px";
       canvas.style.left = "10px";
@@ -46,7 +46,7 @@ export const useMovimento = (posicaoInicial, guardaPos, direcaoGuarda, escadasAb
       canvas.style.transform = "scale(1)"; // Aumenta para veres melhor
       canvas.style.imageRendering = "pixelated";
       document.body.appendChild(canvas); 
-      // ----------------------------------------------
+      // ----------------------------------------------*/
 
       canvasRef.current = canvas;
       ctxRef.current = canvas.getContext('2d', { willReadFrequently: true });
